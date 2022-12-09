@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import dummyData from "../dummyData";
+import { TaskData } from "../taskData";
 import { Card } from "./Card";
 
 export const Main = () => {
-  const [data, setData] = useState(dummyData);
+  const [data, setData] = useState(TaskData);
 
   const onDragEnd = (result) => {
     if (!result.destination) return;
@@ -56,6 +56,7 @@ export const Main = () => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
+      {/* <h1 className="pageTitle">タスク管理</h1> */}
       <div className="trello">
         {data.map((section) => (
           <Droppable key={section.id} droppableId={section.id}>
@@ -83,7 +84,12 @@ export const Main = () => {
                             opacity: snapshot.isDragging ? "0.3" : "1",
                           }}
                         >
-                          <Card>{task.title}</Card>
+                          <Card
+                            title={task.title}
+                            purpose={task.purpose}
+                            term={task.term}
+                            input_time={task.input_time}
+                          />
                         </div>
                       )}
                     </Draggable>
