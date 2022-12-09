@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Main } from "./components/Main";
+import { Sidebar } from "./components/Sidebar";
 
 function App() {
+  console.log(new Date());
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="header">
+        <h1 className="appTitle">Teiji</h1>
+        <p className="logout">ログアウト</p>
+      </div>
+      <div className="App">
+        {/* <h1 style={{ marginBottom: "20px" }}>trello like app</h1> */}
+        <Sidebar />
+        <Main />
+      </div>
+    </>
   );
 }
 

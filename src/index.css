@@ -1,13 +1,137 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  height: 50px;
+  background-color: #2d445d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appTitle {
+  margin-left: 20px;
+}
+
+.logout {
+  margin-right: 20px;
+}
+
+.App {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #3b627a;
+  /* background: rgb(61, 93, 189);
+  background: linear-gradient(
+    126deg,
+    rgba(61, 93, 189, 1) 0%,
+    rgba(33, 63, 107, 1) 96%
+  ); */
+  height: 100vh;
+  color: #e4e4e4;
+  line-height: 1.5;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.sidebar {
+  height: 200vh;
+  width: 200px;
+  background-color: #2d445d;
+}
+
+.sidebarIcon {
+  padding: 20px;
+}
+
+.sidebarList {
+  height: auto;
+  width: 100%;
+  padding: 0;
+}
+
+.sidebarList #active {
+  background-color: #3b627a;
+}
+
+.sidebarList .row {
+  width: 100%;
+  height: 60px;
+  /* background-color: cadetblue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.sidebarList .row:hover {
+  cursor: pointer;
+  background-color: #3b627a;
+}
+
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row #title {
+  flex: 70%;
+}
+
+.trello {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.trello-section {
+  width: 400px;
+  /* border: 1px solid white; */
+  background: rgb(30, 25, 31);
+  background: linear-gradient(
+    126deg,
+    rgba(30, 25, 31, 1) 0%,
+    rgba(51, 45, 54, 1) 96%
+  );
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.trello-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+.pageTitle {
+  /* color: black; */
+  margin-bottom: 30px;
+}
+
+.card {
+  padding: 30px;
+  background: rgb(145, 137, 145);
+  background: linear-gradient(126deg, rgb(79, 73, 79) 0%, rgb(68, 64, 69) 96%);
+  border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskButton {
+  display: flex;
+  flex-flow: column;
+}
+
+.taskHoldButton {
+  margin-top: 10px;
 }
