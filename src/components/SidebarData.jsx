@@ -7,7 +7,7 @@ export const SidebarData = [
   {
     title: "マイタスク",
     icon: <HomeIcon />,
-    link: "/task",
+    link: "/my_task",
   },
   {
     title: "メンバー",

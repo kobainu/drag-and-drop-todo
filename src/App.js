@@ -1,21 +1,24 @@
 import "./App.css";
-import { Main } from "./components/Main";
+import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "./components/Router";
 
 function App() {
-  console.log(new Date());
   return (
-    <>
+    <BrowserRouter>
       <div className="header">
-        <h1 className="appTitle">Teiji</h1>
-        <p className="logout">ログアウト</p>
+        <Header />
       </div>
       <div className="App">
-        {/* <h1 style={{ marginBottom: "20px" }}>trello like app</h1> */}
-        <Sidebar />
-        <Main />
+        <div className="sidebarArea">
+          <Sidebar />
+        </div>
+        <div className="mainContentArea">
+          <Router />
+        </div>
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 

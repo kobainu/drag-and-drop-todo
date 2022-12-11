@@ -3,7 +3,7 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { TaskData } from "../taskData";
 import { Card } from "./Card";
 
-export const Main = () => {
+export const MyTask = () => {
   const [data, setData] = useState(TaskData);
 
   const onDragEnd = (result) => {

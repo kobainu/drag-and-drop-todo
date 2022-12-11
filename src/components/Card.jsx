@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { TaskDetail } from "./TaskDetail";
 
 export const Card = ({ title, purpose, term, input_time }) => {
+  const [show, setShow] = useState(false);
+
   const onClickTaskDetails = () => {
-    alert(`タスク「${title}」の詳細`);
+    setShow(true);
+    console.log(show);
   };
 
   const onClickTaskHold = () => {
@@ -21,6 +25,14 @@ export const Card = ({ title, purpose, term, input_time }) => {
         <button className="taskDetailsButton" onClick={onClickTaskDetails}>
           詳細
         </button>
+        <TaskDetail
+          show={show}
+          setShow={setShow}
+          title={title}
+          purpose={purpose}
+          term={term}
+          input_time={input_time}
+        />
         <button className="taskHoldButton" onClick={onClickTaskHold}>
           保留
         </button>
